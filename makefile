@@ -23,7 +23,7 @@ PROG = $(BIN)/geometria
 CPPFLAGS = -Wall -pedantic -std=c++11 -I$(INC)
 
 # Lista dos arquivos objeto (.o) que formam o binario/executavel final
-OBJS = $(OBJ)/retangulo.o $(OBJ)/triangulo.o $(OBJ)/circulo.o $(OBJ)/piramide.o $(OBJ)/cubo.o $(OBJ)/paralelepipedo.o $(OBJ)/main.o
+OBJS = $(OBJ)/retangulo.o $(OBJ)/triangulo.o $(OBJ)/circulo.o $(OBJ)/piramide.o $(OBJ)/cubo.o $(OBJ)/paralelepipedo.o $(OBJ)/esfera.o $(OBJ)/main.o
 
 all : $(OBJS)
 	$(CC) $(LDFLAGS) -o $(PROG) $(OBJS)
@@ -56,6 +56,8 @@ $(OBJ)/cubo.o : $(INC)/cubo.h
 $(OBJ)/paralelepipedo.o : $(INC)/paralelepipedo.h
 	$(CC) $(CPPFLAGS) -c $(SRC)/paralelepipedo.cpp -o $@
 
+$(OBJ)/esfera.o : $(INC)/esfera.h
+	$(CC) $(CPPFLAGS) -c $(SRC)/esfera.cpp -o $@
 
 
 # Alvo para a criação dos diretórios padrão de projetos.

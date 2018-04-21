@@ -8,19 +8,19 @@ Piramide::~Piramide(){}
 double
 Piramide::getAltura()
 {
-	double par1 = (m_aresta * (sqrt(3)/2)) * (m_aresta * (sqrt(3)/2));
-	double par2 = (m_aresta * m_aresta) / 4;
+	double par1 = pow(m_aresta * (sqrt(3)/2), 2);
+	double par2 = pow(m_aresta, 2) / 4;
 	return sqrt(par1 - par2);
 }
 
 double
 Piramide::calculaVolume(double valor)
 {
-	return ((valor * valor) * getAltura())/3;
+	return (pow(valor, 2) * getAltura())/3;
 }
 
 double 
 Piramide::calculaArea(double valor)
 {
-	return (sqrt(3)/2) * (3 * (valor * valor));
+	return (sqrt(3)/2) * (3 * pow(valor, 2));
 }

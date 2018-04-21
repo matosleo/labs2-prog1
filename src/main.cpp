@@ -1,18 +1,20 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "retangulo.h"
 #include "triangulo.h"
 #include "circulo.h"
 #include "piramide.h"
 #include "cubo.h"
 #include "paralelepipedo.h"
+#include "esfera.h"
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 
 void imprimeRegra();
-bool validaValor(double, double, double)
-bool validaValor(double, double);
 bool validaValor(double);
+bool validaValor(double, double);
+bool validaValor(double, double, double);
 void imprimeResultadosPlanas(std::string, double, double);
 void imprimeResultadosGeo(std::string, double, double);
 
@@ -40,6 +42,10 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Triangulo t(valor);
 					imprimeResultadosPlanas(argv[1], t.calculaArea(valor, t.getAltura()), t.calculaPerimetro(valor));
 				}
+				else
+				{
+					std::cout << "Valor inválido" << std::endl;
+				}
 				break;
 			}
 
@@ -52,6 +58,10 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Retangulo r(valor1, valor2);
 					imprimeResultadosPlanas(argv[1], r.calculaArea(valor1, valor2), r.calculaPerimetro(valor1, valor2));
 				}
+				else
+				{
+					std::cout << "Valores inválidos" << std::endl;
+				}
 				break;
 			}
 
@@ -63,6 +73,10 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Retangulo q(valor);
 					imprimeResultadosPlanas(argv[1], q.calculaArea(valor), q.calculaPerimetro(valor));
 				}
+				else
+				{
+					std::cout << "Valor inválido" << std::endl;
+				}				
 				break;
 			}
 
@@ -74,6 +88,10 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Circulo c(valor);
 					imprimeResultadosPlanas(argv[1], c.calculaArea(valor), c.calculaPerimetro(valor));
 				}
+				else
+				{
+					std::cout << "Valor inválido" << std::endl;
+				}				
 				break;
 			}
 
@@ -85,6 +103,10 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Piramide p(valor);
 					imprimeResultadosGeo(argv[1], p.calculaArea(valor), p.calculaVolume(valor));
 				}
+				else
+				{
+					std::cout << "Valor inválido" << std::endl;
+				}				
 				break;
 			}
 
@@ -96,6 +118,10 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Cubo cu(valor);
 					imprimeResultadosGeo(argv[1], cu.calculaArea(), cu.calculaVolume());
 				}
+				else
+				{
+					std::cout << "Valor inválido" << std::endl;
+				}				
 				break;
 			}
 
@@ -109,8 +135,27 @@ int main(int argc, char const *argv[]) //argv[0]:geometria argv[1]:forma argv[2]
 					Paralelepipedo pa(valor1, valor2, valor3);
 					imprimeResultadosGeo(argv[1], pa.calculaArea(), pa.calculaVolume());
 				}
+				else
+				{
+					std::cout << "Valores inválidos" << std::endl;
+				}					
 				break;
 			}
+
+			case 7:
+			{
+				double valor = std::stod(argv[2]);
+				if(validaValor(valor))
+				{
+					Esfera es(valor);
+					imprimeResultadosGeo(argv[1], es.calculaArea(), es.calculaVolume());
+				}
+				else
+				{
+					std::cout << "Valor inválido" << std::endl;
+				}				
+				break;
+			}			
 		}
 	}
 	else
@@ -128,30 +173,32 @@ void imprimeRegra()
 	std::cout << "Por exemplo, na linha de comando, digite: ./bin/geometria quadrado 6" << std::endl;
 }
 
-//CONCERTAR AQUI!!!! erro na sobrecarga de função
-bool validaValor(double valor1, double valor2 = 1.0, double valor3 = 1.0)
-{
-	return valor1 && valor2 && valor3;
-}
-
-bool validaValor(double valor1 = 1.0, double valor2 = 1.0)
-{
-	return valor1 && valor2;
-}
 
 bool validaValor(double valor1)
 {
-	return valor1;
+	return (valor1 > 0)? true : false;
+}
+
+bool validaValor(double valor1, double valor2)
+{
+	return (valor1 > 0 && valor2 > 0)? true : false;
+}
+
+bool validaValor(double valor1, double valor2, double valor3)
+{
+	return (valor1 > 0 && valor2 > 0 && valor3 > 0)? true : false;
 }
 
 void imprimeResultadosPlanas(std::string forma, double valor1, double valor2) 
 {
+	std::cout << std::setprecision(2) << std::fixed;
 	std::cout << "Area do " << forma << ": " << valor1 << std::endl;
 	std::cout << "Perimetro do " << forma << ": " << valor2 << std::endl;
 }
 
 void imprimeResultadosGeo(std::string forma, double valor1, double valor2)
 {
+	std::cout << std::setprecision(2) << std::fixed;
 	if(forma == "piramide" || forma == "esfera")
 	{
 		std::cout << "Area da " << forma << ": " << valor1 << std::endl;
