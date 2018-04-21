@@ -1,8 +1,8 @@
 # Laboratório 2
 Uso das ferramentas de desenvolvimento de programas em C++.
 
- *Aluno: Leonardo dos Santos Matos
- *Matrícula: 20160143879
+ * Aluno: Leonardo dos Santos Matos
+ * Matrícula: 20160143879
  
 ## Como compilar:
 No terminal, digite: 
@@ -16,7 +16,7 @@ No terminal, digite:
 ```bash
 $ ./bin/geometria nome_da_figura valor1 valor2 valor3 ... valorn
 ```
-*Há figuras planas e geométricas
+## Há figuras planas e geométricas
 
 Segue abaixo a lista de formas disponíveis e os valores que elas recebem:
 * Quadrado         | 1 valor referente aos lados
