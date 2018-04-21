@@ -7,9 +7,7 @@ class Triangulo
 {
 private:
 	double m_lados;
-	double m_altura;
-	double m_area;
-	double m_perimetro;
+
 public:
 	Triangulo(double lado);
 	~Triangulo();

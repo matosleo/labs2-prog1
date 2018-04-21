@@ -23,7 +23,7 @@ PROG = $(BIN)/geometria
 CPPFLAGS = -Wall -pedantic -std=c++11 -I$(INC)
 
 # Lista dos arquivos objeto (.o) que formam o binario/executavel final
-OBJS = $(OBJ)/retangulo.o $(OBJ)/triangulo.o $(OBJ)/circulo.o $(OBJ)/main.o
+OBJS = $(OBJ)/retangulo.o $(OBJ)/triangulo.o $(OBJ)/circulo.o $(OBJ)/piramide.o $(OBJ)/cubo.o $(OBJ)/paralelepipedo.o $(OBJ)/main.o
 
 all : $(OBJS)
 	$(CC) $(LDFLAGS) -o $(PROG) $(OBJS)
@@ -46,6 +46,15 @@ $(OBJ)/triangulo.o : $(INC)/triangulo.h
 
 $(OBJ)/circulo.o : $(INC)/circulo.h
 	$(CC) $(CPPFLAGS) -c $(SRC)/circulo.cpp -o $@
+
+$(OBJ)/piramide.o : $(INC)/piramide.h
+	$(CC) $(CPPFLAGS) -c $(SRC)/piramide.cpp -o $@
+
+$(OBJ)/cubo.o : $(INC)/cubo.h
+	$(CC) $(CPPFLAGS) -c $(SRC)/cubo.cpp -o $@
+
+$(OBJ)/paralelepipedo.o : $(INC)/paralelepipedo.h
+	$(CC) $(CPPFLAGS) -c $(SRC)/paralelepipedo.cpp -o $@
 
 
 
