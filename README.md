@@ -21,8 +21,8 @@ $ ./bin/geometria nome_da_figura valor1 valor2 valor3 ... valorn
 Formas | Valores de entrada
 ------------ | -------------
 Quadrado | 1 valor referente aos lados
-Retangulo | 2 valores referentes a base e altura respectivamente
-Triangulo | 1 valor referente aos lados, já que se trata de um triângulo equilátero
+Retângulo | 2 valores referentes a base e altura respectivamente
+Triângulo | 1 valor referente aos lados, já que se trata de um triângulo equilátero
 Círculo | 1 valor referente ao tamanho
 Cubo | 1 valor referente aos lados
 Paralelepípedo | 3 valores referentes a altura, base, comprimento respectivamente
