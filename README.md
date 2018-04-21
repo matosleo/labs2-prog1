@@ -19,13 +19,13 @@ $ ./bin/geometria nome_da_figura valor1 valor2 valor3 ... valorn
 *Há figuras planas e geométricas
 
 Segue abaixo a lista de formas disponíveis e os valores que elas recebem:
-*Quadrado         | 1 valor referente aos lados
-*Retangulo        | 2 valores referente a base e altura
-*Triangulo        | 1 valor referente aos lados, já que se trata de um triângulo equilátero
-*Círculo          | 1 valor referente ao tamanho
-*Cubo             |
-*Paralelepípedo   |
-*Pirâmide         |
-*Esfera           |
+* Quadrado         | 1 valor referente aos lados
+* Retangulo        | 2 valores referente a base e altura
+* Triangulo        | 1 valor referente aos lados, já que se trata de um triângulo equilátero
+* Círculo          | 1 valor referente ao tamanho
+* Cubo             |
+* Paralelepípedo   |
+* Pirâmide         |
+* Esfera           |
 
  
