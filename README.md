@@ -1,5 +1,5 @@
 # Laboratório 2
-Uso das ferramentas de desenvolvimento de programas em C++.
+> Uso das ferramentas de desenvolvimento de programas em C++.
 
  * Aluno: Leonardo dos Santos Matos
  * Matrícula: 20160143879
