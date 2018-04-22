@@ -2,7 +2,7 @@
 build lib/*
 
 # Ignora todos os binarios/executaveis
-bin/*
+/bin/ *
 
 # Ignora o diretorio de documentacao
-doc/*
+/doc/ *

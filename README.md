@@ -9,7 +9,7 @@ No terminal, digite:
 ```bash
 $ make direc
 ```
-Logo após digite:
+Para criar os diretórios necessários. Logo após digite:
 ```bash
 $ make
 ```

@@ -61,8 +61,12 @@ $(OBJ)/esfera.o : $(INC)/esfera.h
 
 
 # Alvo para a criação dos diretórios padrão de projetos.
-direc:
+stdDirec:
 	mkdir bin build doc include lib src test
+
+# Alvo para a criação dos diretórios necessários para compilação.
+direc:
+	mkdir bin build
 
 # Alvo para a criação do arquivo Doxyfile.
 doxy:
