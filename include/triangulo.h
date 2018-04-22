@@ -1,3 +1,12 @@
+/**
+ * @file	jogador.h
+ * @brief	Implementação da classe Jogador em C++
+ * @author	Leonardo dos Santos Matos
+ * @since	17/04/2018
+ * @date	21/04/2018
+ * @sa		https://github.com/matosleo
+ */
+
 #ifndef TRIANGULO_H
 #define TRIANGULO_H
 
@@ -6,7 +15,7 @@
 class Triangulo
 {
 private:
-	double m_lados;
+	double m_lados; /**< Representa as arestas do triângulo */
 
 public:
 	Triangulo(double lado);
@@ -14,8 +23,8 @@ public:
 
 	double getAltura();
 
-	double calculaArea(double, double);
-	double calculaPerimetro(double);
+	double calculaArea();
+	double calculaPerimetro();
 
 };
 
