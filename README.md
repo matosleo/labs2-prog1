@@ -7,10 +7,6 @@
 ## Como compilar:
 No terminal, digite: 
 ```bash
-$ make direc
-```
-Para criar os diretórios necessários. Logo após digite:
-```bash
 $ make
 ```
 O makefile está configurado para compilar com todas as flags de warnings e ao final gera um arquivo executável no diretório /bin.
